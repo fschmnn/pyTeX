@@ -7,9 +7,9 @@
 #    mpl.use('pgf')
 #    import matplotlib.pyplot as plt
 #
-# to obtain the correct figuresize use width_pt = \the\textwidth in your 
-# LaTeX document. Then calculate width_in = width_pt / 72.27
-# (optional hight_in = width_in / 1.618)
+# to obtain the correct figuresize use \the\textwidth in LaTeX and then 
+# width = \the\textwidth / 72.27 (optional hight = width / 1.618)
+#
 #                                                (C) Fabian Scheuermann
 # ---------------------------------------------------------------------
 
