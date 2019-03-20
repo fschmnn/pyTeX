@@ -7,9 +7,9 @@
 #    mpl.use('pgf')
 #    import matplotlib.pyplot as plt
 #
-# to obtain the correct figuresize use \the\textwidth in LaTeX and then 
-# width = \the\textwidth / 72.27 (optional hight = width / 1.618)
-#
+# to obtain the correct figuresize use width_pt = \the\textwidth in your 
+# LaTeX document. Then calculate width_in = width_pt / 72.27
+# (optional hight_in = width_in / 1.618)
 #                                                (C) Fabian Scheuermann
 # ---------------------------------------------------------------------
 
@@ -31,8 +31,8 @@ savefig.bbox :      tight
 # from https://www.tableau.com/about/blog/2016/7/colors-upgrade-tableau-10-56782
 #tableau10 = ['1f77b4','ff7f0e','2ca02c','d62728','9467bd','8c564b','e377c2','7f7f7f','bccd22','17becf']
 #tableau20 = ['1f77b4','aec7e8','ff7f0e','ffbb78','2ca02c','98df8a','d62728','ff9896','9467bd','c5b0d5','8c564b','c49c94','e377c2','f7b6d2','7f7f7f','c7c7c7','bcbd22','dbdb8d','17becf','9edae5']
-
-axes.prop_cycle: cycler('color',['d62728','1f77b4','ff7f0e','2ca02c','9467bd','edc949','17becf','e377c2','8c564b'])
+#tabmod = ['d62728','1f77b4','ff7f0e','2ca02c','9467bd','edc949','17becf','e377c2','8c564b']
+axes.prop_cycle: cycler('color',['4e79a7','f28e2b','e15759','76b7b2','59a14e','edc949','b07aa2','ff9da7','9c755f','bab0ac'])
 
 # --------------------------------------------------------------------- 
 # lines and markers
@@ -49,7 +49,7 @@ scatter.marker:    x
 pgf.texsystem:      pdflatex   
 text.usetex:        True
 text.latex.unicode: True 
-#pgf.preamble:      \usepackage[T1]{fontenc},\usepackage{siunitx}
+pgf.preamble:      \usepackage[T1]{fontenc},\usepackage{siunitx},\usepackage{amsmath}
 
 # blank entrie inherit fonts from document
 font.family:     serif
@@ -72,7 +72,7 @@ axes.labelcolor:  black
 # ---------------------------------------------------------------------
 
 axes.linewidth: 0.5
-axes.grid:      True
+axes.grid:      False
 axes.axisbelow: True      
 
 xtick.top:           True
@@ -80,18 +80,18 @@ xtick.color:         585858
 xtick.direction:     in
 xtick.minor.visible: False
 xtick.major.size:    3
-xtick.major.width:   0.5
+xtick.major.width:   0.6
 xtick.minor.size:    2
-xtick.minor.width:   0.4
+xtick.minor.width:   0.3
 
 ytick.right:         True
 ytick.color:         585858
 ytick.direction:     in
 ytick.minor.visible: False
 ytick.major.size:    3
-ytick.major.width:   0.5
+ytick.major.width:   0.6
 ytick.minor.size:    2
-ytick.minor.width:   0.4
+ytick.minor.width:   0.3
 
 # --------------------------------------------------------------------- 
 # grid

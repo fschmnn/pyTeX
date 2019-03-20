@@ -1,0 +1,21 @@
+\PassOptionsToPackage{fleqn}{amsmath}
+\documentclass[10pt]{scrartcl}
+
+\usepackage{pgf}
+\usepackage{blindtext}
+
+\begin{document}
+
+\the\textwidth
+
+\section{First chapter}
+
+\Blindtext
+\begin{figure}
+    \centering
+    \input{plot.pgf}
+    \caption{A simple plot.\label{fig:test}}
+\end{figure}
+\blindtext
+
+\end{document}
